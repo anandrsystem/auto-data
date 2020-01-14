@@ -1,0 +1,34 @@
+.select-trim-product{
+    padding:12px 0;
+    border-bottom: 1px solid #f0f0f0;
+    text-align: center; 
+}
+
+.trim-product-details{
+    padding:12px 0;
+}
+
+.select-trim-modal .header{
+    padding:12px;
+}
+
+.select-trim-modal .list-default ul{
+    list-style-type: none;
+}
+
+
+.select-trim-modal .modal-body{
+    padding: 12px;
+}
+
+.select-trim-modal.modal{
+    display: block!important;
+}
+.select-trim-modal .modal-text{
+    font-size: 18px;
+}
+
+/* Anand */
+.select-trim-modal .modal-dialog {
+    max-width: 283px;
+}

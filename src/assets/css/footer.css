@@ -1,0 +1,54 @@
+footer{
+    padding: 15px;
+    background: #6a6a6a;
+    color:#a6a6a6;
+    font-size: 12px;
+    min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-nav ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+footer .footer-nav ul li{
+    display: inline-block;
+}
+
+footer .footer-nav ul li a{
+    color:#fff;
+    margin-right: 8px;
+    text-decoration: underline;
+}
+footer .footer-nav ul li a:hover{
+    color: #a6a6a6;
+}
+
+footer .provided{
+    color:#a6a6a6;
+    text-transform: uppercase;
+}
+
+footer .f-logo img{
+    max-width: 97px;
+}
+
+.marginT15{
+    margin-top: 15px;
+}
+
+@media only screen and (max-width: 480px) {
+   footer{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+   }
+
+   footer .footer-nav ul li{
+       display: block;
+       margin-bottom: 12px;
+    }
+    
+  }

@@ -1,0 +1,98 @@
+.vehicle-compare{
+    height: 235px;
+    background: #ccc;
+    display: flex;
+    background: url(../images/vehicle_bg-min.png) left bottom no-repeat #f3f3f3;
+    padding: 10px 30px;
+}
+
+.vehicle-compare .competitor-vehicle {
+    min-width: 16%;
+    min-height: 200px;
+    text-align: center;
+    position: relative;
+}
+
+.vehicle-compare .competitor-vehicle .vehicle-image{
+    min-height: 114px;
+}
+
+.base-vehicle .model-trim, .base-vehicle .model-price, .base-vehicle .model-make{
+    font-size: 18px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.competitor-vehicle .model-trim, .competitor-vehicle .model-price, .competitor-vehicle .model-make{
+    font-size: 14px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.base-vehicle .vehicle{
+    height: 100%;;
+} 
+.base-vehicle .vehicle-info{
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.base-vehicle .vehicle-image{
+    display: inline-block;
+}
+
+.competitor-vehicle::before{
+    border-left: 1px solid #cecece;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 2px;
+    background: #fff;
+    position: absolute;
+    
+}
+
+.competitor-vehicle .vehicle-info{
+   margin-bottom: 18px;
+   line-height: normal;
+
+}
+
+
+/* .compare-section .vehicle-compare {
+    height: 235px;
+    background: #ccc;
+    display: flex;
+    background: url(../images/vehicle_bg-min.png) left bottom no-repeat #f3f3f3;
+    padding: 10px 30px;
+}
+
+.compare-section .flex-item {
+    min-width: 16%;
+    min-height: 200px;
+}
+
+.compare-section .flex-grow {
+    flex-grow: 1;
+}
+.compare-section .model-trim, .compare-section .model-price{
+    font-size: 18px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.compare-section .vehicle{
+    height: 100%;;
+} 
+.compare-section .vehicle-info{
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.compare-section  .vehicle-info .vehicle-model {
+    font-weight: bold;
+}
+
+.vehicle-image{
+display: inline-block;
+} */

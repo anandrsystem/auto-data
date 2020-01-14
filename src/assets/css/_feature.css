@@ -1,0 +1,88 @@
+.accordion-panel {
+  margin: 20px 0; }
+  .accordion-panel .panel {
+    border-radius: 0;
+    width: 100%;
+    border: 0; }
+    .accordion-panel .panel .panel-heading {
+      border-radius: 0;
+      background-color: #006bb8;
+      padding-left: 15px;
+      padding-right: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      text-transform: uppercase;
+      -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35);
+      box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.35); }
+      .accordion-panel .panel .panel-heading a:hover {
+        text-decoration: none; }
+      .accordion-panel .panel .panel-heading a:focus {
+        text-decoration: none; }
+    .accordion-panel .panel .panel-body {
+      padding: 0;
+      border: 0; }
+  @media only screen and (min-width: 320px) {
+    .accordion-panel .accordion-data ul {
+      margin: 0;
+      border: 0;
+      list-style: none;
+      padding: 0;
+      font-size: 0; }
+      .accordion-panel .accordion-data ul li {
+        text-align: center;
+        position: relative;
+        padding: 8px;
+        display: inline-block;
+        vertical-align: middle;
+        border: 1px solid #ddd;
+        font-size: 14px;
+        width: 50%; }
+        .accordion-panel .accordion-data ul li.list-heading {
+          width: 100%;
+          text-align: center;
+          font-weight: bold; }
+        .accordion-panel .accordion-data ul li .fa-check-circle {
+          color: #006bb8;
+          padding: 3px 0 0 0;
+          font-size: 16px; }
+        .accordion-panel .accordion-data ul li .link {
+          color: #008ef4; }
+        .accordion-panel .accordion-data ul li .icon-show-desktop {
+          display: none; }
+    .accordion-panel .accordion-data .load-more-btn {
+      text-align: center;
+      margin: 10px 0; }
+      .accordion-panel .accordion-data .load-more-btn button {
+        text-transform: uppercase; }
+    .accordion-panel .accordion-data .strong {
+      font-weight: bold; }
+    .accordion-panel .accordion-data .data-info {
+      text-align: center;
+      color: #8a8a8a;
+      font-style: italic;
+      font-size: 12px;
+      padding: 15px; } }
+  @media only screen and (min-width: 720px) {
+    .accordion-panel .accordion-data ul li {
+      width: 15%; }
+      .accordion-panel .accordion-data ul li:nth-child(1) {
+        width: 40%; }
+      .accordion-panel .accordion-data ul li.list-heading {
+        width: 40%;
+        text-align: left;
+        font-weight: bold; }
+      .accordion-panel .accordion-data ul li .icon-show-mob {
+        display: none; }
+      .accordion-panel .accordion-data ul li .icon-show-desktop {
+        display: block; }
+      .accordion-panel .accordion-data ul li.load-more-btn {
+        border: 0;
+        text-align: center;
+        width: 100%;
+        margin: 0; } }
+  @media (min-width: 720px) and (max-width: 991px) {
+    .accordion-panel .accordion-data ul li {
+      width: 30%; }
+      .accordion-panel .accordion-data ul li:nth-child(1) {
+        width: 40%; } }
