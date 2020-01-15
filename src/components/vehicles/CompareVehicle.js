@@ -22,13 +22,13 @@ class CompareVehicle extends React.Component {
     const { acode } = this.props.selectedModel;
 
     getCompetitorsList(acode).then(competitorsList => {
-      this.setState({ competitorsData: competitorsList });
-
       const acodes = competitorsList.map((el) => {
         return el.acode;
       })
+      acodes.unshift(acode);
+
       getCompetitorsFeatures(acodes).then(competitorsFeatures => {
-        this.setState({ competitorsFeatures });
+        this.setState({ competitorsData: competitorsList, competitorsFeatures });
       })
     })
   }
@@ -55,10 +55,10 @@ class CompareVehicle extends React.Component {
         </div>
         <Suspense fallback={<div>Loading...</div>}>
           <section>
-        <CompetitorFetureGrid
-          competitorsFeaturesData={this.state.competitorsFeatures}
-        />
-        </section>
+            <CompetitorFetureGrid
+              competitorsFeaturesData={this.state.competitorsFeatures}
+            />
+          </section>
         </Suspense>
       </div>
     );

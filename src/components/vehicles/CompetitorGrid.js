@@ -8,7 +8,7 @@ const CompetitorGrid = props => {
   const { yearDesc, modelDesc, trimDesc, trimImage, msrp } = { ...selectedModelData }
   const vehicleImage = trimImage ? trimImagePath(trimImage).replace('jpg', 'png') : '';
   const CompetitorsHTML = competitorsData.length > 0 ? competitorsData.map((item, index) => {
-    const { acode, image, yearDesc, modelDesc, trimDesc, msrp } = item;
+    const { acode, image, yearDesc, divDesc, modelDesc, trimDesc, msrp } = item;
     const competitorImage = competitorImagePath(image).replace('jpg', 'png');
     return (
       index <= 2 ?
@@ -19,7 +19,7 @@ const CompetitorGrid = props => {
           </div>
           <div className="vehicle-info">
             <div>
-              <div className="model-make"> {yearDesc} {modelDesc} </div>
+              <div className="model-make"> {yearDesc} {divDesc} {modelDesc} </div>
               <div className="model-trim"> {trimDesc} </div>
             </div>
             <div>

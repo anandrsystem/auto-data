@@ -2,14 +2,17 @@ import React from 'react';
 
 const Feature = (props) => {
   const { featureGroupName, featureGroupData } = props;
-  const featureHTML = featureGroupData.map((group) => {
-    return <ul>
-      <li className="list-heading">{group.stub}</li>
-      <li>{group.comparedata[0].data}</li>
-      <li>{group.comparedata[1].data}</li>
-      <li>{group.comparedata[2].data}</li>
-      <li>{group.comparedata[3].data}</li>
-    </ul>
+  
+
+  const featureHTML = featureGroupData.map((feature) => {
+    const featureDetails = feature.comparedata ? feature.comparedata.map((item, index) => {
+      return index <= 3 ? <li>{item.data}</li> : null;
+    }) : null;
+
+    return feature.comparedata ? <ul>
+      <li className="list-heading">{feature.stub}</li>
+      {featureDetails}
+    </ul> : null;
   });
 
   return (
