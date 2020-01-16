@@ -14,6 +14,7 @@ import SubHeader from './shared/SubHeader';
 import Footer from './shared/Footer';
 import VehiclesComponent from './vehicles/VehiclesComponent';
 import CompareVehicle from './vehicles/CompareVehicle';
+import ErrorBoundary from './ErrorBoundary';
 
 const App = () => (
   <Router>
@@ -21,7 +22,9 @@ const App = () => (
       <Switch>
         <Route exact path="/">
           <Header></Header>
-          <VehiclesComponent></VehiclesComponent>
+          <ErrorBoundary>
+            <VehiclesComponent></VehiclesComponent>
+          </ErrorBoundary>
         </Route>
         <Route exact path="/compare">
           <SubHeader></SubHeader>

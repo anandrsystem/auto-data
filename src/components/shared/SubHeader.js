@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Redirect } from 'react-router-dom';
 
 const SubHeader = () => {
+  const [isHomePage, setHomePage] = useState(false);
+  if(isHomePage) {
+    return <Redirect to='/' />
+  }
+
   return (
     <div>
       <header>
@@ -17,7 +22,7 @@ const SubHeader = () => {
             <button className="navbar-toggler d-block d-md-none">  <a href="#"> <i className="fa fa-bars"></i>  FEATURES </a> </button>
           </div>
           <div className="btn-wrap">
-            <button type="button" className="btn btn-primary d-none  d-md-inline-block">New Compare </button>
+            <button type="button" className="btn btn-primary d-none  d-md-inline-block" onClick={() => setHomePage(true)}>New Compare </button>
             <button type="button" className="btn btn-primary">Build &amp; Price </button>
             <button type="button" className="btn btn-primary">Request a Quote</button>
             <button type="button" className="btn btn-primary d-none d-md-inline-block"> <i className="fa fa-print"></i> Print</button>

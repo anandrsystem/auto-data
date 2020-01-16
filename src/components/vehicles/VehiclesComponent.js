@@ -18,7 +18,9 @@ class VehiclesComponent extends React.Component {
       selectedModel: {},
       filters: {},
       showModal: false,
-      trimSelected: false
+      trimSelected: false,
+      isError: false,
+      errorMessage: ''
     };
     this.handleModalShowClick = this.handleModalShowClick.bind(this);
     this.handleModalCloseClick = this.handleModalCloseClick.bind(this);
@@ -33,6 +35,8 @@ class VehiclesComponent extends React.Component {
 
       const vehiclesData = formatVehicleList(vehiclesList);
       this.setState({ vehiclesData })
+    }).catch(error => {
+      this.setState({ isError: true, errorMessage: error.message });
     })
   }
 
@@ -87,6 +91,10 @@ class VehiclesComponent extends React.Component {
   }
 
   render() {
+    if (this.state.isError) {
+      // Simulate a JS error
+      throw new Error(this.state.errorMessage);
+    }
     if (this.state.trimSelected) {
       return <Redirect to='/compare' />
     }

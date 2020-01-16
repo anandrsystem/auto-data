@@ -7,7 +7,7 @@ export async function getVehiclesList() {
   const result = await axios.get(api).then(resp => {
     return resp.data[0].data;
   }).catch(error => {
-    console.log(error);
+    throw new Error(error);
   });
 
   return result;
@@ -18,7 +18,7 @@ export async function getSelectedModel(acode) {
   const result = await axios.get(api).then(resp => {
     return resp.data[0].data[0];
   }).catch(error => {
-    console.log(error);
+    throw new Error(error);
   });
 
   return result;

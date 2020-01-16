@@ -4,9 +4,10 @@ const Feature = (props) => {
   const { featureGroupName, featureGroupData } = props;
   
 
-  const featureHTML = featureGroupData.map((feature) => {
-    const featureDetails = feature.comparedata ? feature.comparedata.map((item, index) => {
-      return index <= 3 ? <li>{item.data}</li> : null;
+  const featureHTML = featureGroupData.map((feature, fIndex) => {
+    const featureDetails = feature.comparedata ? feature.comparedata.map((item, iIndex) => {
+      const key = `${fIndex}${feature.stub}${iIndex}`;
+      return iIndex <= 3 ? <li key={key}>{item.data}</li> : null;
     }) : null;
 
     return feature.comparedata ? <ul>
